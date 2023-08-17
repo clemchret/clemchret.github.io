@@ -1,0 +1,128 @@
+@charset "UTF-8";
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+/*Variables*/
+/*Général*/
+html {
+  font-size: 16px;
+}
+
+body {
+  position: relative;
+  font-family: "Hind", sans-serif;
+  color: #343434;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+
+/*nav*/
+.vertical-menu {
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  mix-blend-mode: difference;
+}
+.vertical-menu .main-navigation, .vertical-menu .social-networks {
+  display: inline-block;
+  writing-mode: vertical-rl;
+  transform-origin: left center;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+.vertical-menu .main-navigation .menu-item, .vertical-menu .social-networks .menu-item {
+  color: white;
+  text-decoration: none;
+  padding: 15px 5px;
+}
+.vertical-menu .main-navigation .menu-item:hover, .vertical-menu .social-networks .menu-item:hover {
+  font-weight: 900;
+}
+
+/*Intro*/
+#intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+  background-image: url("../images/background_images/pawel-czerwinski--xplyw_wkRs-unsplash-1080.jpg");
+}
+#intro .myname {
+  position: relative;
+  padding-bottom: 15px;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  word-wrap: break-word;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: white;
+}
+#intro .container-fluid {
+  padding: 0 3rem;
+}
+#intro .myname:after {
+  content: "";
+  width: 45%;
+  height: 15px;
+  background: #faff00;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#intro .intro-main-description {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 1.5rem;
+}
+#intro .secondary-description {
+  padding-top: 2rem;
+  color: white;
+}
+#intro .line {
+  display: block;
+  position: absolute;
+  width: 25%;
+  max-width: 200px;
+  height: 1px;
+  background: white;
+}
+#intro .line:nth-child(1) {
+  top: 35px;
+  left: 15px;
+}
+#intro .line:nth-child(2) {
+  top: 15px;
+  left: 35px;
+  transform-origin: 0% 0%;
+  transform: rotate(90deg);
+}
+#intro .line:nth-child(3) {
+  bottom: 35px;
+  left: 15px;
+}
+#intro .line:nth-child(4) {
+  bottom: 15px;
+  left: 35px;
+  transform-origin: 0% 0%;
+  transform: rotate(-90deg);
+}
+
+#projects, #skills, #contact {
+  height: 500px;
+  padding: 60px 0;
+}/*# sourceMappingURL=style.css.map */
