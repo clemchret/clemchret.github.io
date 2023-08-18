@@ -21,6 +21,12 @@ body{
 h1,h2,h3,h4,h5,h6{
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
+    margin-bottom: 15px;
+}
+
+#projects, #skills, #contact{
+    height: 500px;
+    padding: 4rem 1.5rem;
 }
 
 /*nav*/
@@ -36,13 +42,19 @@ h1,h2,h3,h4,h5,h6{
     mix-blend-mode: difference;    
 
     .main-navigation, .social-networks{
-        display: inline-block;
+        display: flex;
+        align-items: center;
         writing-mode: vertical-rl;
         transform-origin: left center;
         color: #fff;
         text-decoration: none;
-        padding: 10px;
-        transition: background-color 0.3s;
+
+        .cercle{
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            border: 2px solid white;
+        }
 
         .menu-item{
             color: white;
@@ -140,7 +152,33 @@ h1,h2,h3,h4,h5,h6{
 
 }
 
-#projects, #skills, #contact{
-    height: 500px;
-    padding: 60px 0;
+/*About me*/
+.moi-about-me{
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
+
+.about-me-text{
+    background-image: url("../images/pattern/pattern.svg");
+    text-align: justify;
+}
+
+/*Porjects*/
+.projects-selected-proj{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/*Contact*/
+.conversation-contact{
+    color: orangered;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-style: italic;
+    animation: example 1.5s linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%) 0s infinite alternate
+}
+
+@keyframes example {
+    from { letter-spacing: 3px;}
+    to { letter-spacing: 7px;}
+  }
