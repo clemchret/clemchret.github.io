@@ -5,6 +5,7 @@
 /*Variables*/
 $font-color: #343434;
 $yellow: #faff00;
+$lightgrey: #e8e8e8;
 
 /*Général*/
 html{
@@ -21,11 +22,10 @@ body{
 h1,h2,h3,h4,h5,h6{
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-    margin-bottom: 15px;
+    margin-bottom: 3rem;
 }
 
 #projects, #skills, #contact{
-    height: 500px;
     padding: 4rem 1.5rem;
 }
 
@@ -81,6 +81,7 @@ h1,h2,h3,h4,h5,h6{
     .myname{
         position: relative;
         padding-bottom: 15px;
+        margin-bottom: 0;
         font-family: 'Chakra Petch', sans-serif;
         font-weight: 900;
         font-size: 2rem;
@@ -159,7 +160,6 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .about-me-text{
-    background-image: url("../images/pattern/pattern.svg");
     text-align: justify;
 }
 
@@ -170,6 +170,11 @@ h1,h2,h3,h4,h5,h6{
 }
 
 /*Contact*/
+.contact-content{
+    background-image: url("../images/pattern/pattern.svg");
+    padding: 10rem 0;
+}
+
 .conversation-contact{
     color: orangered;
     text-transform: uppercase;
@@ -181,4 +186,20 @@ h1,h2,h3,h4,h5,h6{
 @keyframes example {
     from { letter-spacing: 3px;}
     to { letter-spacing: 7px;}
+  }
+
+  #contact a {
+    display: block;
+    text-decoration: none;
+    color: $font-color;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  /*footer*/
+  #footer{
+    border-top: 3px solid $lightgrey;
+    text-align: center;
+    padding: 2rem 0;
+    letter-spacing: 5px;
   }
