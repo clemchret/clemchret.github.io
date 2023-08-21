@@ -17,7 +17,7 @@ body{
     position: relative;
     font-family: 'Hind', sans-serif;
     color: $font-color;
-    background-color: #fffaeb;
+    background-color: #fffcf2;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -204,6 +204,7 @@ h1,h2,h3,h4,h5,h6{
 /*Contact*/
 .contact-content{
     background-image: url("../images/pattern/pattern.svg");
+    background-position: center;
     padding: 10rem 0;
 }
 
