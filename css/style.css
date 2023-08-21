@@ -13,7 +13,7 @@ body {
   position: relative;
   font-family: "Hind", sans-serif;
   color: #343434;
-  background-color: #fffcf2;
+  background-color: #faf7ef;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -69,6 +69,9 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   height: 100vh;
   background-image: url("../images/background_images/pawel-czerwinski--xplyw_wkRs-unsplash-1080.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 #intro .myname {
   position: relative;
