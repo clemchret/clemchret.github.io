@@ -13,6 +13,7 @@ body {
   position: relative;
   font-family: "Hind", sans-serif;
   color: #343434;
+  background-color: #fffaeb;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -104,6 +105,11 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 2rem;
   color: white;
 }
+#intro .secondary-description a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+}
 #intro .line {
   display: block;
   position: absolute;
@@ -144,9 +150,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*Porjects*/
+.project {
+  padding: 2rem 0;
+}
+.project .image-project-container {
+  border-radius: 30px;
+}
+.project .image-project-container img {
+  width: 100%;
+}
+
 .projects-selected-proj {
   text-transform: uppercase;
   letter-spacing: 3px;
+}
+
+#projects .project.row:nth-child(2) .image-project-container {
+  background: #70a0af;
+}
+
+#projects .project.row:nth-child(3) .image-project-container {
+  background: #a0c1b9;
+}
+
+#projects .project.row:nth-child(4) .image-project-container {
+  background: #f4e8c1;
 }
 
 /*Contact*/
