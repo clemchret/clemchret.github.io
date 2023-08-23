@@ -77,23 +77,25 @@ h1,h2,h3,h4,h5,h6{
     justify-content: center;
     position: relative;
     height: 100vh;
-    background-image: url("../images/background_images/pawel-czerwinski--xplyw_wkRs-unsplash-1080.jpg");
+    background-image: url("../images/background_images/pawel-czerwinski-6zgHMnCSTuw-unsplash.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
     .myname{
         position: relative;
+        width: fit-content;
         padding-bottom: 15px;
         margin-bottom: 0;
-        font-family: 'Chakra Petch', sans-serif;
+        font-family: 'Raleway', sans-serif;
         font-weight: 900;
+        font-style: italic;
         font-size: 2rem;
         word-wrap: break-word;
         text-transform: uppercase;
         letter-spacing: 15px;
         -webkit-text-fill-color: transparent;
-        -webkit-text-stroke-width: 1.5px;
+        -webkit-text-stroke-width: 3px;
         -webkit-text-stroke-color: white;
     }
 
@@ -175,7 +177,8 @@ h1,h2,h3,h4,h5,h6{
 
 /*Porjects*/
 .project{
-    margin: 2rem 0;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 
     h3{
         margin: 2rem 0 1rem 0;
@@ -191,11 +194,16 @@ h1,h2,h3,h4,h5,h6{
     }
 
     a{
+        display: block;
+        text-align: center;
+        margin-top: 3rem;
+        letter-spacing: 5px;
+        padding: 5px 35px;
         color: orangered;
         font-weight: bold;
         text-transform: uppercase;
         text-decoration: none;
-        letter-spacing: 5px;
+        border: 2px solid orangered;
     }
 
 }
@@ -205,22 +213,36 @@ h1,h2,h3,h4,h5,h6{
     letter-spacing: 3px;
 }
 
-#projects .project.row:nth-child(2) .image-project-container{
-    background: #70a0af;
+#projects .row:nth-child(2){
+
+    margin-top: 1rem;
+
+    .image-project-container{
+        background: #70a0af;
+    }
+
 }
 
-#projects .project.row:nth-child(3) .image-project-container{
+#projects .row:nth-child(3) .image-project-container{
     background: #a0c1b9;
 }
 
-#projects .project.row:nth-child(4) .image-project-container{
-    background: #f4e8c1;
+#projects .row:nth-child(4){
+
+    margin-bottom: 1rem;
+
+    .image-project-container{
+
+        background: #f4e8c1;
+    }
+
 }
+
 /*Contact*/
 .contact-content{
     background-image: url("../images/pattern/pattern.svg");
     background-position: center;
-    padding: 10rem 0;
+    padding: 6rem 0;
 }
 
 .conversation-contact{
@@ -241,7 +263,6 @@ h1,h2,h3,h4,h5,h6{
     text-decoration: none;
     color: $font-color;
     font-size: 1.5rem;
-    text-transform: uppercase;
   }
 
   /*footer*/
@@ -250,13 +271,23 @@ h1,h2,h3,h4,h5,h6{
     text-align: center;
     padding: 2rem 0;
     letter-spacing: 5px;
+    background-image: url(../images/background_images/pawel-czerwinski-6zgHMnCSTuw-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
   }
 
 
   /*Desktop*/
   @media (width >= 1024px) {
+    #intro .myname{
+        font-size: 10rem;
+    }
+
     .project{
-        margin: 8rem 0;
+        margin-top: 10rem;
+        margin-bottom: 10rem;
 
         h3{
             margin: 0 0 1rem 0;
@@ -265,7 +296,12 @@ h1,h2,h3,h4,h5,h6{
         .col-12{
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;/*à déplacer vers desktoooooooooooooooooooooooooooooooooooooooooooooop*/
+            justify-content: center;
+        }
+
+        a{
+            margin-top: 1rem;
+            width: fit-content;
         }
     }
   }
