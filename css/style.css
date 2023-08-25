@@ -19,7 +19,11 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  margin-bottom: 5rem;
 }
 
 #projects, #skills, #contact {
@@ -36,24 +40,23 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  mix-blend-mode: difference;
+  background: #343434;
 }
 .vertical-menu .main-navigation, .vertical-menu .social-networks {
   display: flex;
   align-items: center;
   writing-mode: vertical-rl;
   transform-origin: left center;
-  color: #fff;
   text-decoration: none;
 }
 .vertical-menu .main-navigation .cercle, .vertical-menu .social-networks .cercle {
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  border: 2px solid white;
+  border: 2px solid #faf7ef;
 }
 .vertical-menu .main-navigation .menu-item, .vertical-menu .social-networks .menu-item {
-  color: white;
+  color: #faf7ef;
   text-decoration: none;
   padding: 15px 5px;
 }
@@ -67,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   justify-content: center;
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url("../images/background_images/pawel-czerwinski-6zgHMnCSTuw-unsplash.webp");
   background-repeat: no-repeat;
   background-position: center;
@@ -115,6 +118,10 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   text-decoration: none;
   border-bottom: 1px solid #fff;
+  transition: all 1s ease-in-out;
+}
+#intro .secondary-description a:hover {
+  font-weight: 700;
 }
 #intro .line {
   display: block;
@@ -148,7 +155,10 @@ h1, h2, h3, h4, h5, h6 {
 /*About me*/
 .moi-about-me {
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 17px;
+  font-style: italic;
+  text-shadow: 3px 3px 0px #c7c7c7;
+  color: #ff4500;
 }
 
 .about-me-text {
@@ -165,8 +175,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .project .image-project-container {
   border-radius: 20px;
-  max-width: 550px;
-  max-height: 350px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -174,7 +182,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: auto;
 }
-.project a {
+.project .perso-link {
   display: block;
   text-align: center;
   margin-top: 1rem;
@@ -185,11 +193,20 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   text-decoration: none;
   border: 2px solid orangered;
+  box-shadow: inset 0 0 0 0 white;
+  transition: all 0.3s ease-in-out;
+}
+.project .perso-link:hover {
+  box-shadow: inset 300px 0 0 0 orangered;
+  color: #faf7ef;
 }
 
 .projects-selected-proj {
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 17px;
+  font-style: italic;
+  text-shadow: 3px 3px 0px #c7c7c7;
+  color: #ff4500;
 }
 
 #projects .row:nth-child(2) {
@@ -236,6 +253,7 @@ h1, h2, h3, h4, h5, h6 {
 #contact a {
   display: block;
   text-decoration: none;
+  font-weight: 700;
   color: #343434;
   font-size: 1.5rem;
 }
@@ -269,6 +287,10 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  .project .image-project-container {
+    max-width: 550px;
+    max-height: 350px;
   }
   .project a {
     margin-top: 1rem;

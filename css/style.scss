@@ -6,6 +6,7 @@
 $font-color: #343434;
 $yellow: #faff00;
 $lightgrey: #e8e8e8;
+$bodybackground-color: #faf7ef;
 
 /*Général*/
 html{
@@ -17,13 +18,17 @@ body{
     position: relative;
     font-family: 'Hind', sans-serif;
     color: $font-color;
-    background-color: #faf7ef;
+    background-color: $bodybackground-color;
 }
 
 h1,h2,h3,h4,h5,h6{
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+}
+
+h2{
+    margin-bottom: 5rem;
 }
 
 #projects, #skills, #contact{
@@ -40,25 +45,24 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    mix-blend-mode: difference;    
+    background: #343434;
 
     .main-navigation, .social-networks{
         display: flex;
         align-items: center;
         writing-mode: vertical-rl;
         transform-origin: left center;
-        color: #fff;
         text-decoration: none;
 
         .cercle{
             width: 20px;
             height: 20px;
             border-radius: 20px;
-            border: 2px solid white;
+            border: 2px solid $bodybackground-color;
         }
 
         .menu-item{
-            color: white;
+            color: $bodybackground-color;
             text-decoration: none;
             padding: 15px 5px;
             
@@ -76,7 +80,7 @@ h1,h2,h3,h4,h5,h6{
     flex-direction: column;
     justify-content: center;
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url("../images/background_images/pawel-czerwinski-6zgHMnCSTuw-unsplash.webp");
     background-repeat: no-repeat;
     background-position: center;
@@ -127,6 +131,11 @@ h1,h2,h3,h4,h5,h6{
             color: white;
             text-decoration: none;
             border-bottom: 1px solid #fff;
+            transition: all 1s ease-in-out;
+        }
+
+        a:hover{
+            font-weight: 700;
         }
     }
 
@@ -168,7 +177,10 @@ h1,h2,h3,h4,h5,h6{
 /*About me*/
 .moi-about-me{
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 17px;
+    font-style: italic;
+    text-shadow: 3px 3px 0px #c7c7c7;
+    color: #ff4500;
 }
 
 .about-me-text{
@@ -186,8 +198,6 @@ h1,h2,h3,h4,h5,h6{
 
     .image-project-container{
         border-radius: 20px;
-        max-width: 550px;
-        max-height: 350px;
         object-fit: cover;
     
         img{
@@ -197,7 +207,7 @@ h1,h2,h3,h4,h5,h6{
     
     }
 
-    a{
+    .perso-link{
         display: block;
         text-align: center;
         margin-top: 1rem;
@@ -208,13 +218,24 @@ h1,h2,h3,h4,h5,h6{
         text-transform: uppercase;
         text-decoration: none;
         border: 2px solid orangered;
+        box-shadow: inset 0 0 0 0 white;
+        transition: all 0.3s ease-in-out;
     }
+
+
+	.perso-link:hover{
+		box-shadow: inset 300px 0 0 0 orangered;
+		color: $bodybackground-color;
+	}
 
 }
 
 .projects-selected-proj{
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 17px;
+    font-style: italic;
+    text-shadow: 3px 3px 0px #c7c7c7;
+    color: #ff4500;
 }
 
 #projects .row:nth-child(2){
@@ -265,6 +286,7 @@ h1,h2,h3,h4,h5,h6{
   #contact a {
     display: block;
     text-decoration: none;
+    font-weight: 700;
     color: $font-color;
     font-size: 1.5rem;
   }
@@ -301,6 +323,11 @@ h1,h2,h3,h4,h5,h6{
             display: flex;
             flex-direction: column;
             justify-content: center;
+        }
+
+        .image-project-container{
+            max-width: 550px;
+            max-height: 350px;
         }
 
         a{
