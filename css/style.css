@@ -165,14 +165,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 .project .image-project-container {
   border-radius: 20px;
+  max-width: 550px;
+  max-height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .project .image-project-container img {
   width: 100%;
+  height: auto;
 }
 .project a {
   display: block;
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 1rem;
   letter-spacing: 5px;
   padding: 5px 35px;
   color: orangered;

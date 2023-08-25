@@ -186,9 +186,13 @@ h1,h2,h3,h4,h5,h6{
 
     .image-project-container{
         border-radius: 20px;
+        max-width: 550px;
+        max-height: 350px;
+        object-fit: cover;
     
         img{
             width: 100%;
+            height: auto;
         }
     
     }
@@ -196,7 +200,7 @@ h1,h2,h3,h4,h5,h6{
     a{
         display: block;
         text-align: center;
-        margin-top: 3rem;
+        margin-top: 1rem;
         letter-spacing: 5px;
         padding: 5px 35px;
         color: orangered;
