@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .menu-items {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -51,12 +51,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 100vw;
   background: #343434;
   list-style: none;
-  padding: 40px 10px;
   margin-bottom: 0;
+  padding: 0;
   z-index: 1;
+  overflow: hidden;
   font-family: "Montserrat";
   font-style: italic;
-  transition: height 0.4s ease-in-out;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-items li {
@@ -117,10 +118,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .menu-items.active {
-  display: flex;
   overflow: hidden;
   height: 100vh;
-  transition: height 0.4s ease-in-out;
+}
+
+body.menu-open {
+  overflow-y: hidden;
 }
 
 .vertical-menu {
@@ -138,6 +141,11 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+#intro .fullname {
+  text-align: center;
+  color: white;
+  font-size: 6rem;
 }
 #intro .myname {
   position: relative;
@@ -175,6 +183,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 #intro .secondary-description {
   padding-top: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
   color: white;
 }
 #intro .secondary-description a {
