@@ -150,7 +150,7 @@ body.menu-open{
     .fullname{
         text-align: center;
         color: white;
-        font-size: 6rem;
+        font-size: calc(1rem + 9vw);
     }
 
     .myname{
@@ -161,7 +161,6 @@ body.menu-open{
         font-family: 'Raleway', sans-serif;
         font-weight: 900;
         font-style: italic;
-        font-size: 2rem;
         word-wrap: break-word;
         text-transform: uppercase;
         letter-spacing: 15px;
