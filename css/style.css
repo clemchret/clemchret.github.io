@@ -1,4 +1,44 @@
 @charset "UTF-8";
+/* raleway-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/Raleway/static/Raleway-Black.ttf") format("truetype");
+}
+/* montserrat-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/Montserrat/static/Montserrat-Black.ttf") format("truetype");
+}
+/* montserrat-900italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 900;
+  src: url("../fonts/Montserrat/static/Montserrat-BlackItalic.ttf") format("truetype");
+}
+/* hind-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Hind";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Hind/Hind-Light.ttf") format("truetype");
+}
+/* hind-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Hind";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Hind/Hind-Bold.ttf") format("truetype");
+}
 *, ::after, ::before {
   box-sizing: border-box;
 }
@@ -78,6 +118,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .menu-items .social-networks {
+  display: flex;
   border-top: 5px solid #faf7ef;
   margin-top: 1rem;
   padding: 2rem;
@@ -358,7 +399,7 @@ body.menu-open {
   background-size: cover;*/
   font-family: "Montserrat", sans-serif;
   background: #faf7ef;
-  color: #dddddd;
+  color: #343434;
   font-weight: 700;
   font-size: 1.2rem;
 }
