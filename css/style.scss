@@ -149,24 +149,21 @@ body.menu-open{
 
     .fullname{
         text-align: center;
-        color: white;
+        color: $bodybackground-color;
         font-size: calc(1rem + 9vw);
     }
 
     .myname{
         position: relative;
         width: fit-content;
-        padding-bottom: 15px;
-        margin-bottom: 0;
         font-family: 'Raleway', sans-serif;
         font-weight: 900;
-        font-style: italic;
         word-wrap: break-word;
         text-transform: uppercase;
         letter-spacing: 15px;
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke-width: 3px;
-        -webkit-text-stroke-color: white;
+        -webkit-text-stroke-color: $bodybackground-color;
     }
 
     .container-fluid{
@@ -185,7 +182,7 @@ body.menu-open{
 
     .intro-main-description{
         font-family: 'Montserrat', sans-serif;
-        color: white;
+        color: $bodybackground-color;
         font-size: 1.5rem;
     }
 
@@ -193,12 +190,12 @@ body.menu-open{
         padding-top: 2rem;
         font-size: 1.5rem;
         text-align: center;
-        color: white;
+        color: $bodybackground-color;
 
         a{
-            color: white;
+            color: $bodybackground-color;
             text-decoration: none;
-            border-bottom: 1px solid #fff;
+            border-bottom: 1px solid $bodybackground-color;
             transition: all 1s ease-in-out;
         }
 
@@ -213,7 +210,7 @@ body.menu-open{
         width: 25%;
         max-width: 200px;
         height: 1px;
-        background: white;
+        background: $bodybackground-color;
     }
 
     .line:nth-child(1){
@@ -273,6 +270,7 @@ body.menu-open{
     .image-project-container{
         border-radius: 20px;
         object-fit: cover;
+        box-shadow: 0px 0px 20px -10px #000;
     
         img{
             width: 100%;
@@ -450,13 +448,11 @@ body.menu-open{
             }
         }       
         /*Intro*/
-        #intro .myname{
-            font-size: 10rem;
-        }       
+             
         /*Projects*/
         .project{
             margin-top: 10rem;
-            margin-bottom: 10rem;       
+            margin-bottom: 10rem;
             h3{
                 margin: 0 0 1rem 0;
             }       
@@ -474,4 +470,5 @@ body.menu-open{
                 width: fit-content;
             }
         }
+
     }

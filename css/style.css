@@ -144,24 +144,21 @@ body.menu-open {
 }
 #intro .fullname {
   text-align: center;
-  color: white;
+  color: #faf7ef;
   font-size: calc(1rem + 9vw);
 }
 #intro .myname {
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
-  padding-bottom: 15px;
-  margin-bottom: 0;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
-  font-style: italic;
   word-wrap: break-word;
   text-transform: uppercase;
   letter-spacing: 15px;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-color: #faf7ef;
 }
 #intro .container-fluid {
   padding: 0 3rem;
@@ -177,19 +174,19 @@ body.menu-open {
 }
 #intro .intro-main-description {
   font-family: "Montserrat", sans-serif;
-  color: white;
+  color: #faf7ef;
   font-size: 1.5rem;
 }
 #intro .secondary-description {
   padding-top: 2rem;
   font-size: 1.5rem;
   text-align: center;
-  color: white;
+  color: #faf7ef;
 }
 #intro .secondary-description a {
-  color: white;
+  color: #faf7ef;
   text-decoration: none;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #faf7ef;
   transition: all 1s ease-in-out;
 }
 #intro .secondary-description a:hover {
@@ -201,7 +198,7 @@ body.menu-open {
   width: 25%;
   max-width: 200px;
   height: 1px;
-  background: white;
+  background: #faf7ef;
 }
 #intro .line:nth-child(1) {
   top: 35px;
@@ -252,6 +249,7 @@ body.menu-open {
   border-radius: 20px;
   -o-object-fit: cover;
      object-fit: cover;
+  box-shadow: 0px 0px 20px -10px #000;
 }
 .project .image-project-container img {
   width: 100%;
@@ -410,9 +408,6 @@ body.menu-open {
     font-weight: 900;
   }
   /*Intro*/
-  #intro .myname {
-    font-size: 10rem;
-  }
   /*Projects*/
   .project {
     margin-top: 10rem;
