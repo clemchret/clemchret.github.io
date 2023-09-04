@@ -19,3 +19,7 @@ menuItems.addEventListener('click', function() {
 menuBurger.addEventListener('click', function() {
   document.body.classList.toggle('menu-open');
 });
+
+menuItems.addEventListener('click', function() {
+    document.body.classList.remove('menu-open');
+  });
