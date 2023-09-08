@@ -184,6 +184,28 @@ body.menu-open {
   display: none;
 }
 
+/*Back to top btn*/
+#backToTopBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background-color: #343434;
+  color: #faf7ef;
+  border: transparent;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0 !important;
+}
+
 /*Intro*/
 #intro {
   display: flex;
@@ -221,7 +243,8 @@ body.menu-open {
 }
 #intro .secondary-description {
   padding-top: 2rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
   text-align: center;
   color: #faf7ef;
 }
@@ -283,6 +306,7 @@ body.menu-open {
 }
 .project h3 {
   margin: 2rem 0 1rem 0;
+  text-shadow: -2px 0px 0px #faf7ef, 2px 0px 0px #faf7ef, 0px -2px 0px #faf7ef, 0px 2px 0px #faf7ef;
 }
 .project .underline {
   position: relative;
@@ -393,18 +417,12 @@ body.menu-open {
 
 /*footer*/
 #footer {
-  border-top: 3px solid #e8e8e8;
+  border-top: 7px solid #e8e8e8;
   text-align: center;
-  padding: 2rem 0;
-  letter-spacing: 5px;
-  /*background-image: url(../images/background_images/pawel-czerwinski-6zgHMnCSTuw-unsplash.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;*/
-  font-family: "Montserrat", sans-serif;
+  letter-spacing: 2px;
+  padding: 4rem 0;
   background: #faf7ef;
-  color: #343434;
-  font-weight: 700;
+  color: #b9b9b9;
   font-size: 1.2rem;
 }
 
@@ -418,6 +436,9 @@ body.menu-open {
   }
   /*Nav*/
   .mobile-menu {
+    display: none;
+  }
+  #backToTopBtn {
     display: none;
   }
   .vertical-menu {
@@ -484,6 +505,10 @@ body.menu-open {
   }
   .project:hover .underline:after {
     width: 100%;
+  }
+  /*Contact*/
+  #contact h2 {
+    margin-bottom: 2rem;
   }
 }
 @media (width >= 2560px) {

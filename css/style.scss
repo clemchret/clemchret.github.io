@@ -195,6 +195,30 @@ body.menu-open{
     display: none;
 }
 
+
+/*Back to top btn*/
+#backToTopBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-color: $font-color;
+    color: $bodybackground-color;
+    border: transparent;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.hidden{
+    opacity: 0 !important;
+}
+
+
 /*Intro*/
 #intro{
     display: flex;
@@ -235,7 +259,8 @@ body.menu-open{
 
     .secondary-description{
         padding-top: 2rem;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        line-height: 2rem;
         text-align: center;
         color: $bodybackground-color;
 
@@ -308,6 +333,11 @@ body.menu-open{
 
     h3{
         margin: 2rem 0 1rem 0;
+        text-shadow:
+        -2px 0px 0px $bodybackground-color,
+        2px 0px 0px $bodybackground-color,
+        0px -2px 0px $bodybackground-color,
+        0px 2px 0px $bodybackground-color;
     }
 
     .underline{
@@ -432,18 +462,12 @@ body.menu-open{
 
   /*footer*/
   #footer{
-    border-top: 3px solid $lightgrey;
+    border-top: 7px solid $lightgrey;
     text-align: center;
-    padding: 2rem 0;
-    letter-spacing: 5px;
-    /*background-image: url(../images/background_images/pawel-czerwinski-6zgHMnCSTuw-unsplash.webp);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;*/
-    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    padding: 4rem 0;
     background: #faf7ef;
-    color: $font-color;
-    font-weight: 700;
+    color: #b9b9b9;
     font-size: 1.2rem;
   }
 
@@ -458,6 +482,10 @@ body.menu-open{
         }       
         /*Nav*/
         .mobile-menu{
+            display: none;
+        }
+
+        #backToTopBtn{
             display: none;
         }
 
@@ -531,6 +559,11 @@ body.menu-open{
 
         .project:hover .underline:after{
             width: 100%;
+        }
+
+        /*Contact*/
+        #contact h2{
+            margin-bottom: 2rem;
         }
 
     }
