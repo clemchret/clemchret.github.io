@@ -1,3 +1,37 @@
+//Animation Nom
+anime.timeline({loop: false})
+  .add({
+    targets: '.presentation .fullname',
+    scale: [16,1],
+    opacity: [0,1],
+    easing: "easeOutCirc",
+    duration: 900,
+    delay: (el, i) => 900 * i
+  }).add({
+    targets: '.presentation',
+    opacity: 1
+  });
+
+//Animation intro secondaire
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.intro-main-description');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.intro-main-description .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 2250,
+    delay: (el, i) => 30 * (i+1)
+  }).add({
+    targets: '.intro-main-description',
+    opacity: 1,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+
 //Initialisation des animations de scroll
 AOS.init();
 
