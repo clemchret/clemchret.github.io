@@ -283,6 +283,22 @@ body.menu-open {
   transform-origin: 0% 0%;
   transform: rotate(-90deg);
 }
+#intro .scroll-down-btn {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  color: #faf7ef;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
+}
 
 /*About me*/
 #skills h3 {

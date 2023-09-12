@@ -5,16 +5,15 @@ anime.timeline({loop: false})
     scale: [16,1],
     opacity: [0,1],
     easing: "easeOutCirc",
-    duration: 900,
+    duration: 1500,
     delay: (el, i) => 900 * i
   }).add({
     targets: '.presentation',
     opacity: 1
-  });
+});
 
 //Animation intro secondaire
-// Wrap every letter in a span
-var textWrapper = document.querySelector('.intro-main-description');
+const textWrapper = document.querySelector('.intro-main-description');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
 anime.timeline({loop: false})
@@ -23,13 +22,20 @@ anime.timeline({loop: false})
     opacity: [0,1],
     easing: "easeInOutQuad",
     duration: 2250,
-    delay: (el, i) => 30 * (i+1)
-  }).add({
-    targets: '.intro-main-description',
-    opacity: 1,
-    duration: 1000,
-    easing: "easeOutExpo",
+    delay: (el, i) => 30 * (i+1),
     delay: 1000
+  });
+
+//Animation intro secondaire
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.secondary-description',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 1250,
+    delay: (el, i) => 30 * (i+1),
+    delay: 2000
   });
 
 //Initialisation des animations de scroll
