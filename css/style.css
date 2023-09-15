@@ -23,13 +23,13 @@
   font-weight: 900;
   src: url("../fonts/Montserrat/static/Montserrat-BlackItalic.ttf") format("truetype");
 }
-/* hind-300 - latin */
+/* hind-400 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Hind";
   font-style: normal;
-  font-weight: 300;
-  src: url("../fonts/Hind/Hind-Light.ttf") format("truetype");
+  font-weight: 400;
+  src: url("../fonts/Hind/Hind-Regular.ttf") format("truetype");
 }
 /* hind-700 - latin */
 @font-face {
@@ -63,7 +63,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 #projects, #skills, #contact {
@@ -190,7 +190,7 @@ body.menu-open {
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 20px;
+  bottom: 35px;
   right: 0;
   width: 40px;
   height: 40px;
@@ -220,6 +220,8 @@ body.menu-open {
   overflow: hidden;
 }
 #intro .fullname {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   color: #faf7ef;
   font-size: calc(1rem + 7vw);
@@ -240,7 +242,7 @@ body.menu-open {
   font-family: "Montserrat", sans-serif;
   text-align: center;
   color: #faf7ef;
-  font-size: 1.5rem;
+  font-size: calc(1rem + 2vw);
 }
 #intro .secondary-description {
   padding-top: 2rem;
@@ -302,7 +304,7 @@ body.menu-open {
 
 /*About me*/
 #skills h3 {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 #skills p {
   margin-bottom: 3rem;
@@ -395,17 +397,22 @@ body.menu-open {
 }
 
 #projects .row:nth-child(4) {
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
 }
 #projects .row:nth-child(4) .image-project-container {
   background: #f4e8c1;
+}
+
+.tools img {
+  height: 40px;
+  margin: 0 20px 25px 0;
 }
 
 /*Contact*/
 .contact-content {
   /*background-image: url("../images/pattern/pattern.svg");*/
   background-position: center;
-  padding: 6rem 0;
+  padding: 4rem 0;
 }
 
 .conversation-contact {
