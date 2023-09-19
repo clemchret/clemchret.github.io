@@ -308,7 +308,7 @@ body.menu-open {
   transform: rotate(-90deg);
 }
 #intro .scroll-down-btn {
-  display: flex;
+  display: none;
   align-items: center;
   flex-direction: column;
   position: absolute;
@@ -405,7 +405,7 @@ body.menu-open {
 }
 
 #projects .row:nth-child(4) {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 #projects .row:nth-child(4) .image-project-container {
   background: #f4e8c1;

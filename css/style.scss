@@ -1,5 +1,5 @@
 /* raleway-900 - latin */
-  @font-face {
+@font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Raleway';
     font-style: normal;
@@ -17,7 +17,7 @@
   }
 
 /* montserrat-900italic - latin */
-  @font-face {
+@font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Montserrat';
     font-style: italic;
@@ -35,7 +35,7 @@
 }
 
 /* Karla-700 - latin */
-  @font-face {
+@font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Karla';
     font-style: normal;
@@ -331,7 +331,7 @@ body.menu-open{
     }
 
     .scroll-down-btn{
-        display: flex;
+        display: none;
         align-items: center;
         flex-direction: column;
         position: absolute;
@@ -451,7 +451,7 @@ body.menu-open{
 
 #projects .row:nth-child(4){
 
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 
     .image-project-container{
 
