@@ -23,21 +23,21 @@
   font-weight: 900;
   src: url("../fonts/Montserrat/static/Montserrat-BlackItalic.ttf") format("truetype");
 }
-/* hind-400 - latin */
+/* Karla-400 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Hind";
+  font-family: "Karla";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/Hind/Hind-Regular.ttf") format("truetype");
+  src: url("../fonts/Karla/static/Karla-Regular.ttf") format("truetype");
 }
-/* hind-700 - latin */
+/* Karla-700 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Hind";
+  font-family: "Karla";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/Hind/Hind-Bold.ttf") format("truetype");
+  src: url("../fonts/Karla/static/Karla-Bold.ttf") format("truetype");
 }
 *, ::after, ::before {
   box-sizing: border-box;
@@ -51,8 +51,8 @@ html {
 
 body {
   position: relative;
-  font-family: "Hind", sans-serif;
-  line-height: 1.6rem;
+  font-family: "Karla", sans-serif;
+  line-height: 1.8rem;
   color: #343434;
   background-color: #faf7ef;
   /*background-image: url("../images/background_images/pattern.svg");*/
@@ -70,6 +70,13 @@ h1, h2, h3, h4, h5, h6 {
   padding: 2rem 0;
 }
 
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-style: italic;
+  text-shadow: 3px 3px 0px #c7c7c7;
+}
+
 .underline:after {
   content: "";
   width: 100%;
@@ -79,6 +86,24 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   left: 0;
   z-index: -1;
+}
+
+/*Scrollbar*/
+/* Pour les navigateurs WebKit (Chrome, Safari, etc.) */
+/* Barre de défilement */
+::-webkit-scrollbar {
+  width: 10px; /* Largeur de la barre de défilement */
+}
+
+/* Bouton de défilement */
+::-webkit-scrollbar-thumb {
+  background-color: #faf7ef; /* Couleur du bouton de défilement */
+  border-radius: 10px; /* Bord arrondi du bouton de défilement */
+}
+
+/* Piste de défilement */
+::-webkit-scrollbar-track {
+  background-color: #343434; /* Couleur de la piste de défilement */
 }
 
 /*nav*/
@@ -213,17 +238,16 @@ body.menu-open {
   justify-content: center;
   position: relative;
   min-height: 100vh;
-  background-image: url("../images/background_images/pawel-czerwinski-6zgHMnCSTuw-unsplash.webp");
+  /*background-image: url("../images/background_images/pawel-czerwinski-6zgHMnCSTuw-unsplash.webp");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: cover;*/
   overflow: hidden;
 }
 #intro .fullname {
   display: flex;
   flex-direction: column;
   text-align: center;
-  color: #faf7ef;
   font-size: calc(1rem + 7vw);
 }
 #intro .myname {
@@ -236,12 +260,11 @@ body.menu-open {
   letter-spacing: 15px;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: #faf7ef;
+  -webkit-text-stroke-color: #343434;
 }
 #intro .intro-main-description {
   font-family: "Montserrat", sans-serif;
   text-align: center;
-  color: #faf7ef;
   font-size: calc(1rem + 2vw);
 }
 #intro .secondary-description {
@@ -249,12 +272,11 @@ body.menu-open {
   font-size: 1.2rem;
   line-height: 2rem;
   text-align: center;
-  color: #faf7ef;
 }
 #intro .secondary-description a {
-  color: #faf7ef;
+  color: #343434;
   text-decoration: none;
-  border-bottom: 1px solid #faf7ef;
+  border-bottom: 1px solid #343434;
   transition: all 1s ease-in-out;
 }
 #intro .line {
@@ -263,7 +285,7 @@ body.menu-open {
   width: 25%;
   max-width: 200px;
   height: 2px;
-  background: #faf7ef;
+  background: #343434;
 }
 #intro .line:nth-child(1) {
   top: 35px;
@@ -294,7 +316,7 @@ body.menu-open {
   left: 0;
   right: 0;
   margin: 0 auto;
-  color: #faf7ef;
+  color: #343434;
   text-transform: uppercase;
   letter-spacing: 5px;
   text-decoration: none;
@@ -308,14 +330,6 @@ body.menu-open {
 }
 #skills p {
   margin-bottom: 3rem;
-}
-
-.moi-about-me {
-  text-transform: uppercase;
-  letter-spacing: 17px;
-  font-style: italic;
-  text-shadow: 3px 3px 0px #c7c7c7;
-  color: #ff4500;
 }
 
 /*Projects*/
@@ -342,6 +356,8 @@ body.menu-open {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  border-radius: 20px;
+  border: 12px solid rgba(0, 0, 0, 0.1803921569);
 }
 .project .perso-link {
   display: block;
@@ -375,14 +391,6 @@ body.menu-open {
 }
 .project .perso-link:hover {
   color: #faf7ef;
-}
-
-.projects-selected-proj {
-  text-transform: uppercase;
-  letter-spacing: 17px;
-  font-style: italic;
-  text-shadow: 3px 3px 0px #c7c7c7;
-  color: #ff4500;
 }
 
 #projects .row:nth-child(2) {
