@@ -12,32 +12,6 @@ anime.timeline({loop: false})
     opacity: 1
 });
 
-//Animation intro secondaire
-const textWrapper = document.querySelector('.intro-main-description');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-anime.timeline({loop: false})
-  .add({
-    targets: '.intro-main-description .letter',
-    opacity: [0,1],
-    easing: "easeInOutQuad",
-    duration: 2250,
-    delay: (el, i) => 30 * (i+1),
-    delay: 1000
-  });
-
-//Animation intro secondaire
-
-anime.timeline({loop: false})
-  .add({
-    targets: '.secondary-description',
-    opacity: [0,1],
-    easing: "easeInOutQuad",
-    duration: 1250,
-    delay: (el, i) => 30 * (i+1),
-    delay: 2000
-  });
-
 //Initialisation des animations de scroll
 AOS.init();
 

@@ -49,7 +49,7 @@
 
 /*Variables*/
 $font-color: #343434;
-$yellow: #faff00;
+$orange: #ff6e38;
 $lightgrey: #e8e8e8;
 $bodybackground-color: #fcf9f1;
 
@@ -82,20 +82,25 @@ h1,h2,h3,h4,h5,h6{
 h2{
     text-transform: uppercase;
     letter-spacing: 10px;
-    font-style: italic;
-    text-shadow: 3px 3px 0px #c7c7c7;
 }
-
 
 .underline:after{
     content:"";
     width: 100%;
     height: 15px;
-    background: orangered;
+    background: $orange;
     position: absolute;
     bottom: 0;
     left: 0;
     z-index: -1;
+}
+
+.accent-text{
+    background-image: linear-gradient(45deg, $orange, orange);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
 }
 
 /*Scrollbar*/
@@ -162,7 +167,7 @@ h2{
 }
 
 .menu-items a:hover{
-    color: orangered;
+    color: $orange;
 }
 
 .menu-items .social-networks{
@@ -262,6 +267,7 @@ body.menu-open{
         flex-direction: column;
         text-align: center;
         font-size: calc(1rem + 7vw);
+        text-shadow: 5px 5px #a0c1b9;
     }
 
     .myname{
@@ -272,9 +278,10 @@ body.menu-open{
         word-wrap: break-word;
         text-transform: uppercase;
         letter-spacing: 15px;
-        -webkit-text-fill-color: transparent;
-        -webkit-text-stroke-width: 3px;
+        -webkit-text-fill-color: $bodybackground-color;
+        -webkit-text-stroke-width: 2px;
         -webkit-text-stroke-color: $font-color;
+        filter: drop-shadow(7px 0px 0px $font-color);
     }
 
     .intro-main-description{
@@ -348,6 +355,15 @@ body.menu-open{
 
 }
 
+.stripes{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: linear-gradient(rgb(200, 35, 55) 0%, rgb(200, 35, 55) 25%, rgb(224, 98, 54) 25%, rgb(224, 98, 54) 50%, rgb(215, 171, 97) 50%, rgb(215, 171, 97) 75%, rgb(47, 76, 121) 75%, rgb(47, 76, 121) 100%);
+    height: 70px;
+}
+
 /*About me*/
 #skills{
     h3{
@@ -402,14 +418,15 @@ body.menu-open{
         overflow: hidden;
         text-align: center;
         margin-top: 1rem;
-        letter-spacing: 5px;
+        letter-spacing: 3px;
         padding: 5px 20px;
-        color: orangered;
+        color: $orange;
         font-weight: bold;
         line-height: 1rem;
-        text-transform: uppercase;
         text-decoration: none;
-        border: 2px solid orangered;
+        border: 2px solid $orange;
+        border-radius: 5px;
+        box-shadow: 5px 5px $orange;
         transition: all 0.5s ease-in-out;
     }
 
@@ -420,7 +437,7 @@ body.menu-open{
         left: -100%;
         width: 100%;
         height: 100%;
-        background-color: orangered;
+        background-color: $orange;
         transition: all 0.5s ease-in-out;
         z-index: -1;
       }
@@ -473,7 +490,7 @@ body.menu-open{
 }
 
 .conversation-contact{
-    color: orangered;
+    color: $orange;
     text-transform: uppercase;
     letter-spacing: 3px;
     font-style: italic;
@@ -508,6 +525,8 @@ body.menu-open{
     @media (width >= 992px) {
         h2{
             margin-bottom: 5rem;
+            margin-top: 2rem;
+            letter-spacing: 20px;
         }       
         #projects, #skills, #contact{
             padding: 4rem 0;
