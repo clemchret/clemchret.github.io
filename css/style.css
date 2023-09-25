@@ -250,7 +250,7 @@ body.menu-open {
   flex-direction: column;
   text-align: center;
   font-size: calc(1rem + 7vw);
-  text-shadow: 5px 5px #a0c1b9;
+  text-shadow: 3px 3px #a0c1b9;
 }
 #intro .myname {
   position: relative;
@@ -267,11 +267,11 @@ body.menu-open {
 #intro .intro-main-description {
   font-family: "Raleway", sans-serif;
   text-align: center;
-  font-size: calc(1rem + 2vw);
+  font-size: calc(1.5rem + 2vw);
+  line-height: 2rem;
 }
 #intro .secondary-description {
   padding-top: 2rem;
-  font-size: 1.2rem;
   line-height: 2rem;
   text-align: center;
 }
@@ -338,6 +338,21 @@ body.menu-open {
 .project {
   margin-top: 5rem;
   margin-bottom: 5rem;
+  /*.perso-link::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: $orange;
+      transition: all 0.3s ease-in-out;
+      z-index: -1;
+    }
+
+    .perso-link:hover::before {
+      left: 0;
+    }*/
 }
 .project h3 {
   margin: 2rem 0 1rem 0;
@@ -377,41 +392,29 @@ body.menu-open {
   box-shadow: 5px 5px rgb(255, 145, 0);
   transition: all 0.5s ease-in-out;
 }
-.project .perso-link::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: #ff6e38;
-  transition: all 0.5s ease-in-out;
-  z-index: -1;
-}
-.project .perso-link:hover::before {
-  left: 0;
-}
 .project .perso-link:hover {
   color: #fcf9f1;
-  background-color: transparent;
+  background-color: #ff6e38;
+  transform: translateY(5px);
+  box-shadow: 0 0 #ff6e38;
 }
 
 #projects .row:nth-child(2) {
   margin-top: 1rem;
 }
 #projects .row:nth-child(2) .image-project-container {
-  background: #70a0af;
+  background: radial-gradient(circle, rgb(154, 204, 219) 0%, rgb(112, 160, 175) 100%);
 }
 
 #projects .row:nth-child(3) .image-project-container {
-  background: #a0c1b9;
+  background: radial-gradient(circle, rgb(195, 240, 229) 0%, rgb(160, 193, 185) 100%);
 }
 
 #projects .row:nth-child(4) {
   margin-bottom: 2rem;
 }
 #projects .row:nth-child(4) .image-project-container {
-  background: #f4e8c1;
+  background: radial-gradient(circle, rgb(250, 246, 232) 0%, rgb(244, 232, 193) 100%);
 }
 
 .tools img {
@@ -427,7 +430,9 @@ body.menu-open {
 }
 
 .conversation-contact {
-  color: #ff6e38;
+  -webkit-text-fill-color: #fcf9f1;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #ff6e38;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-style: italic;
@@ -436,10 +441,10 @@ body.menu-open {
 
 @keyframes conversation {
   from {
-    letter-spacing: 3px;
+    letter-spacing: 7px;
   }
   to {
-    letter-spacing: 7px;
+    letter-spacing: 12px;
   }
 }
 #contact a {
@@ -456,7 +461,7 @@ body.menu-open {
   text-align: center;
   letter-spacing: 2px;
   padding: 4rem 0;
-  background: #faf7ef;
+  background: #fcf9f1;
   font-size: 1.2rem;
 }
 
@@ -514,6 +519,12 @@ body.menu-open {
     opacity: 0.7;
   }
   /*Intro*/
+  #intro .fullname {
+    text-shadow: 5px 5px #a0c1b9;
+  }
+  #intro .secondary-description {
+    font-size: 1.2rem;
+  }
   /*Projects*/
   .project {
     margin-top: 10rem;

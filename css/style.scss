@@ -261,7 +261,7 @@ body.menu-open{
         flex-direction: column;
         text-align: center;
         font-size: calc(1rem + 7vw);
-        text-shadow: 5px 5px #a0c1b9;
+        text-shadow: 3px 3px #a0c1b9;
     }
 
     .myname{
@@ -281,12 +281,12 @@ body.menu-open{
     .intro-main-description{
         font-family: 'Raleway', sans-serif;
         text-align: center;
-        font-size: calc(1rem + 2vw);
+        font-size: calc(1.5rem + 2vw);
+        line-height: 2rem;
     }
 
     .secondary-description{
         padding-top: 2rem;
-        font-size: 1.2rem;
         line-height: 2rem;
         text-align: center;
 
@@ -414,7 +414,7 @@ body.menu-open{
         transition: all 0.5s ease-in-out;
     }
 
-    .perso-link::before {
+    /*.perso-link::before {
         content: "";
         position: absolute;
         top: 0;
@@ -422,17 +422,19 @@ body.menu-open{
         width: 100%;
         height: 100%;
         background-color: $orange;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.3s ease-in-out;
         z-index: -1;
       }
     
       .perso-link:hover::before {
         left: 0;
-      }
+      }*/
 
       .perso-link:hover{
         color: $bodybackground-color;
-        background-color: transparent;
+        background-color: $orange;
+        transform: translateY(5px);
+        box-shadow: 0 0 $orange;
       }
 
 }
@@ -442,13 +444,13 @@ body.menu-open{
     margin-top: 1rem;
 
     .image-project-container{
-        background: #70a0af;
+        background: radial-gradient(circle, rgba(154,204,219,1) 0%, rgba(112,160,175,1) 100%);
     }
 
 }
 
 #projects .row:nth-child(3) .image-project-container{
-    background: #a0c1b9;
+    background: radial-gradient(circle, rgba(195,240,229,1) 0%, rgba(160,193,185,1) 100%);
 }
 
 #projects .row:nth-child(4){
@@ -457,7 +459,7 @@ body.menu-open{
 
     .image-project-container{
 
-        background: #f4e8c1;
+        background: radial-gradient(circle, rgba(250,246,232,1) 0%, rgba(244,232,193,1) 100%);
     }
 
 }
@@ -475,7 +477,9 @@ body.menu-open{
 }
 
 .conversation-contact{
-    color: $orange;
+    -webkit-text-fill-color: #fcf9f1;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #ff6e38;
     text-transform: uppercase;
     letter-spacing: 3px;
     font-style: italic;
@@ -483,8 +487,8 @@ body.menu-open{
 }
 
 @keyframes conversation {
-    from { letter-spacing: 3px;}
-    to { letter-spacing: 7px;}
+    from { letter-spacing: 7px;}
+    to { letter-spacing: 12px;}
   }
 
   #contact a {
@@ -501,7 +505,7 @@ body.menu-open{
     text-align: center;
     letter-spacing: 2px;
     padding: 4rem 0;
-    background: #faf7ef;
+    background: $bodybackground-color;
     font-size: 1.2rem;
   }
 
@@ -566,7 +570,16 @@ body.menu-open{
             }
         }       
         /*Intro*/
-             
+        #intro{
+            .fullname{
+                text-shadow: 5px 5px #a0c1b9;
+            }
+
+            .secondary-description{
+                font-size: 1.2rem;
+            }
+        }
+
         /*Projects*/
         .project{
             margin-top: 10rem;
