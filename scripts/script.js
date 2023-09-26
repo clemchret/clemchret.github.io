@@ -1,16 +1,4 @@
-//Animation Nom
-anime.timeline({loop: false})
-  .add({
-    targets: '.presentation .fullname',
-    scale: [16,1],
-    opacity: [0,1],
-    easing: "easeOutCirc",
-    duration: 1500,
-    delay: (el, i) => 900 * i
-  }).add({
-    targets: '.presentation',
-    opacity: 1
-});
+
 
 //Initialisation des animations de scroll
 AOS.init();

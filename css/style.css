@@ -84,7 +84,7 @@ h2 {
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent; 
   -moz-text-fill-color: transparent;*/
-  -webkit-text-fill-color: #fcf9f1;
+  -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #ff6e38;
 }
@@ -267,7 +267,7 @@ body.menu-open {
 #intro .intro-main-description {
   font-family: "Raleway", sans-serif;
   text-align: center;
-  font-size: calc(1.5rem + 2vw);
+  font-size: calc(1em + 2vw);
   line-height: 2rem;
 }
 #intro .secondary-description {
@@ -366,7 +366,7 @@ body.menu-open {
 }
 .project .image-project-container {
   border-radius: 10px;
-  box-shadow: 0px 0px 20px -10px #000;
+  box-shadow: 0px 1px 30px -20px black;
 }
 .project .image-project-container img {
   width: 100%;
@@ -427,12 +427,17 @@ body.menu-open {
   /*background-image: url("../images/pattern/pattern.svg");*/
   background-position: center;
   padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .conversation-contact {
-  -webkit-text-fill-color: #fcf9f1;
+  -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #ff6e38;
+  font-size: calc(1em + 4vw);
   text-transform: uppercase;
   letter-spacing: 3px;
   font-style: italic;
@@ -453,6 +458,15 @@ body.menu-open {
   font-weight: 700;
   color: #343434;
   font-size: 1.2rem;
+}
+
+.info-contact {
+  width: -moz-fit-content;
+  width: fit-content;
+  background: #fcf9f1;
+  border-radius: 65px;
+  box-shadow: 0px 1px 30px -20px black;
+  padding: 2rem 3rem;
 }
 
 /*footer*/
@@ -484,6 +498,8 @@ body.menu-open {
   }
   .vertical-menu {
     position: fixed;
+    height: 100%;
+    width: 40px;
     z-index: 1;
     right: 0;
     top: 0;
