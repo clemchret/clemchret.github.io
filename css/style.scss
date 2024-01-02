@@ -87,15 +87,19 @@ h2{
 }
 
 .accent-text{
-    /*background-image: linear-gradient(45deg, $orange, orange);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;*/
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: $orange;
 }
+
+a{
+    transition: all 0.3s ease-in-out;
+    color: #70a0af;
+ }
+
+a:hover{
+    opacity: 0.7;
+ }
 
 /*Scrollbar*/
 /* Pour les navigateurs WebKit (Chrome, Safari, etc.) */
@@ -508,8 +512,8 @@ body.menu-open{
     width: fit-content;
     background: $bodybackground-color;
     border-radius: 65px;
-    box-shadow: 0px 1px 30px -20px black;
-    padding: 2rem 3rem;
+    box-shadow: 0px 0px 30px -20px black;
+    padding: 2rem 2rem;
 }
 
   /*footer*/
@@ -587,7 +591,7 @@ body.menu-open{
         /*Intro*/
         #intro{
             .fullname{
-                text-shadow: 5px 5px #a0c1b9;
+                text-shadow: 6px 6px #a0c1b9;
             }
 
             .secondary-description{
@@ -634,6 +638,22 @@ body.menu-open{
         #contact h2{
             margin-bottom: 2rem;
         }
+
+        .conversation-contact{
+            -webkit-text-stroke-width: 3px;
+         }
+
+         .info-contact{
+            padding: 2rem 3rem;
+         }
+
+         #contact a{
+            transition: all 0.3s ease-in-out;
+         }
+
+         #contact a:hover{
+            color: #70a0af;
+         }
 
     }
 
